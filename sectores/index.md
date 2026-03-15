@@ -54,7 +54,7 @@ Soluciones para supermercados y estaciones de servicio:
 - Gestión de proveedores
 - Análisis de ventas
 
-## Flash Cash y Fintech
+## Flash Reports
 
 Sistemas financieros:
 
@@ -62,6 +62,7 @@ Sistemas financieros:
 - Múltiples unidades de negocio
 - Pagos online
 - Integraciones bancarias
+- Integraciones ARCA
 
 ## Implementación ERP
 
@@ -70,5 +71,7 @@ Diseño e implementación de sistemas ERP personalizados:
 - Módulos financieros
 - Recursos humanos
 - Producción y logística
-- Ventas y distribución
+- Ventas Clientes 
+- Compras Proveedores 
+- Contabilidad
 - Reporting ejecutivo en tiempo real
