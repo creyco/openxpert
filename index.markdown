@@ -1,11 +1,11 @@
 ---
 layout: default
-title: openXpert - Soluciones Digitales
+title: openXpert - Digital Solutions 
 ---
 
 <div class="hero">
   <div class="hero-content">
-    <img src="/images/openXpert.jpg" alt="openXpert" class="hero-image">
+    <img src="/assets/images/openxpert-compact-header.png" alt="openXpert" class="hero-image">
     <h1>Bienvenido a openXpert</h1>
     <p class="tagline">Somos su socio estratégico en el mundo digital y tecnológico. Con una sólida trayectoria en desarrollo web y móvil, y una profunda experiencia en infraestructura informática, ofrecemos soluciones integrales que impulsan el crecimiento y la eficiencia de su negocio.</p>
     <a href="#contacto" class="cta-button">Contáctanos</a>

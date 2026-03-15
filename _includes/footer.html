@@ -1,0 +1,35 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ site.title }}</h3>
+                <p>{{ site.description | truncate: 150 }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="{{ '/' | prepend: site.baseurl }}">Inicio</a></li>
+                    <li><a href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a></li>
+                    <li><a href="{{ '/servicios/' | prepend: site.baseurl }}">Servicios</a></li>
+                    <li><a href="{{ '/sectores/' | prepend: site.baseurl }}">Sectores</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    {% if site.phone %}
+                    <li>{{ site.phone }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Todos los derechos reservados.</p>
+            <p>Desarrollado con Jekyll</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,46 @@
+<header class="site-header">
+    <div class="container">
+        <a href="{{ '/' | prepend: site.baseurl }}" class="site-logo">
+            <img src="{{ '/assets/images/openxpert-removebg.png' | prepend: site.baseurl }}" alt="{{ site.title }}" class="logo-img">
+        </a>
+        
+        <nav class="site-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="{{ '/' | prepend: site.baseurl }}">Inicio</a></li>
+                <li><a href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a></li>
+                <li><a href="{{ '/servicios/' | prepend: site.baseurl }}">Servicios</a></li>
+                <li><a href="{{ '/sectores/' | prepend: site.baseurl }}">Sectores</a></li>
+                <li><a href="{{ '/about/' | prepend: site.baseurl }}">Acerca de</a></li>
+                <li>
+                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    
+    // Check saved preference
+    if (localStorage.getItem('darkMode') === 'true') {
+        body.classList.add('dark-mode');
+    }
+    
+    toggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    });
+});
+</script>

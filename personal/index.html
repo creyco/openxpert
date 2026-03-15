@@ -56,26 +56,34 @@
 </head>
 <body>
     <header>
-        <img src="openXpert.jpg" alt="OpenXpert Logo" style="max-width:180px; display:block; margin:0 auto 1rem;">
+        <img src="assets/images/openxpert-removebg.png" alt="OpenXpert Logo" style="max-width:1000px; display:block; margin:0 auto 1rem;">
         <h1>Christian Rey</h1>
         <p data-es="Desarrollador Full-Stack | Backend | Analista de Sistemas | IA | Administración Linux"
            data-en="Full-Stack Developer | Backend | Systems Analyst | AI | Linux Administration"
            data-it="Sviluppatore Full-Stack | Backend | Analista di Sistemi | IA | Amministrazione Linux">
            Desarrollador Full-Stack | Backend | Analista de Sistemas | IA | Administración Linux
         </p>
-        <button class="btn-darkmode" onclick="toggleDarkMode()">Cambiar tema</button>
-
+        
         <!-- Selector de idioma -->
         <div class="lang-selector" style="margin-top:1rem; display:flex; justify-content:center; gap:10px;">
             <button onclick="setLang('es')">🇪🇸</button>
             <button onclick="setLang('en')">🇬🇧</button>
             <button onclick="setLang('it')">🇮🇹</button>
+            <button class="btn-darkmode" id="darkModeToggle" style="margin-left:10px;">🌙</button>
         </div>
     </header>
 
+    <!-- Banner Principal 
+    <section class="hero-banner">
+        <img src="assets/images/openxpert-compact-header.png" alt="openXpert - Soluciones Digitales" style="width:100%; max-width:1440px; height:auto;">
+    </section>
+    -->
     <nav>
         <a href="#sobre-mi" data-es="Sobre mí" data-en="About me" data-it="Su di me">Sobre mí</a>
         <a href="#proyectos" data-es="Proyectos" data-en="Projects" data-it="Progetti">Proyectos</a>
+        <a href="/blog/" data-es="Blog" data-en="Blog" data-it="Blog">Blog</a>
+        <a href="/servicios/" data-es="Servicios" data-en="Services" data-it="Servizi">Servicios</a>
+        <a href="/sectores/" data-es="Sectores" data-en="Sectors" data-it="Settori">Sectores</a>
         <a href="#cv" data-es="CV" data-en="Resume" data-it="Curriculum">CV</a>
         <a href="#contacto" data-es="Contacto" data-en="Contact" data-it="Contatto">Contacto</a>
     </nav>
@@ -105,14 +113,27 @@
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Email: tuemail@example.com</p>
-        <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
+        <p>Email: christiamrey@openxpert.com</p>
+        <p>WhatsApp: +54 3447 434659</p>
+        <p>GitHub: <a href="https://github.com/creyco" target="_blank">github.com/creyco</a></p>
     </section>
 
     <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check saved preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
         }
+        
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDark);
+            darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
     </script>
 </body>
 </html>

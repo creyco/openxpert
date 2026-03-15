@@ -13,31 +13,49 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: openXpert
+author: Christiam Rey
 email: christiamrey@openxpert.com
 description: >-
   Somos su socio estratégico en el mundo digital y tecnológico. Con una sólida trayectoria 
   en desarrollo web y móvil, y una profunda experiencia en infraestructura informática, 
   ofrecemos soluciones integrales que impulsan el crecimiento y la eficiencia de su negocio.
-#baseurl: "/openxpert" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+phone: "+54 3447 434659"
+
+# URL settings
 domain: creyco.github.io
 url: https://creyco.github.io
 baseurl: /openxpert/
 
-twitter_username: jekyllrb
-github_username:  jekyll
+# Social
+twitter_username: openxpert
+github_username: creyco
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Permalinks
+permalink: /blog/:title/
+
+# Markdown
+markdown: kramdown
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
 
 # Exclude from processing.
 # The following items will not be processed, by default.
